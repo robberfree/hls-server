@@ -32,11 +32,12 @@ Here is how to do it with [node-fluent-ffmpeg](https://github.com/fluent-ffmpeg/
 ```javascript
 var ffmpeg = require('fluent-ffmpeg')
 
-function callback() { // do something when encoding is done }
+function callback() { // do something when encoding is done
+}
 
 // Below is FFMPEG converting MP4 to HLS with reasonable options.
 // https://www.ffmpeg.org/ffmpeg-formats.html#hls-2
-fmpeg('input.mp4', { timeout: 432000 }).addOptions([
+ffmpeg('input.mp4', { timeout: 432000 }).addOptions([
     '-profile:v baseline', // baseline profile (level 3.0) for H264 video codec
     '-level 3.0', 
     '-s 640x360',          // 640px width, 360px height output video dimensions
